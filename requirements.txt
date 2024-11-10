@@ -1,0 +1,15 @@
+streamlit==1.40.0
+st-click-detector==0.1.3
+streamlit-toggle-switch==1.0.2
+openai==0.27.8 # supports openai.ChatCompletion which is since deprecated
+trubrics[streamlit]==1.6.1
+langchain==0.0.315
+qdrant-client==1.8
+tiktoken==0.5.1
+streamlit-extras==0.5.0
+pandas==2.2.3
+openpyxl==3.1.5 # used to import the library.xlsx file
+pypdf==5.0.1
+requests==2.32.3 #  for GitHub Actions. used to access qdrant
+selenium==4.25 #  for GitHub Actions. needed to check for app Streamlit suspension due to inactivity
+webdriver-manager==4.0.2  #  for GitHub Actions. Check for Streamlit app suspension due to inactivity
