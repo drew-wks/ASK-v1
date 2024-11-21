@@ -71,8 +71,6 @@ The following configuration was specified for the proof of concept. This proposa
 <br> <br>
  <img src="https://raw.githubusercontent.com/drew-wks/ASK/v1/images/configuration_table.png" alt="configuration table" width="60%"/>
 
-## Administration
-Process details for adding and removing PDFs from the library are located is the notebooks in the library_admin folder. 
 
 ## Costs
 Estimated year one costs are given below based on the recommended configuration. Primary cost drivers are usage and storage. All costs are monthly subscriptions. There is no deployment cost since the prototype has already been built and can be moved to production using volunteers.
