@@ -58,9 +58,11 @@ def get_openai_api_status():
 def get_library_doc_catalog_excel_and_date():
     '''Gets the most recent catalog of library documents for the user to review'''
 
-    directory_path = 'library_admin/'
+    directory_path = 'docs/library_catalog/'
     files_in_directory = os.listdir(directory_path)
-    excel_files = [file for file in files_in_directory if re.match(r'library_docs_list.*\.xlsx$', file)]
+    excel_files = [file for file in files_in_directory if re.match(r'library_catalog.*\.xlsx$', file)]
+    
+    # TODO migrate this to new file naming for the library list
 
     if not excel_files:
         os.write(1,b"There's no Excel file in the directory.\n")
