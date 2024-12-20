@@ -42,7 +42,7 @@ def read_markdown_file(markdown_file):
 
 
 
-st.image("https://raw.githubusercontent.com/drew-wks/ASK/v1/images/ASK_logotype_color.png?raw=true", use_column_width="always") # use_container_width=True instead in streamlit >1.4
+st.image("https://raw.githubusercontent.com/drew-wks/ASK-v1/main/images/ASK_logotype_color.png?raw=true", use_column_width="always") # use_container_width=True instead in streamlit >1.4
 
 back = st.button("< Back to App", type="primary")
 if back:
