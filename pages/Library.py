@@ -69,7 +69,7 @@ with tab2:
         st.markdown(f"{num_items} items. Last update: {last_update_date}")  
 
         # Display the DataFrame
-        display_df = df[['source_short']]
+        display_df = df[['title']]
         edited_df = st.data_editor(display_df, use_container_width=True, hide_index=False, disabled=True)
         isim = f'document_catalog_download_{last_update_date}.csv'
         indir = edited_df.to_csv(index=False)
