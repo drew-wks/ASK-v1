@@ -32,7 +32,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.image("https://raw.githubusercontent.com/dvvilkins/ASK/main/images/ASK_logotype_color.png?raw=true", use_column_width="always") # use_container_width=True instead in streamlit >1.4
+st.image("https://raw.githubusercontent.com/drew-wks/ASK/main/images/ASK_logotype_color.png?raw=true", use_column_width="always") # use_container_width=True instead in streamlit >1.4
 
 
 api_status_message = utils.get_openai_api_status()
