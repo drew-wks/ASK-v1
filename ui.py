@@ -65,7 +65,6 @@ user_question = st.text_input("Type your question or task here", max_chars=200)
 if user_question:
     examples.empty()
     with st.status("Checking documents...", expanded=False) as response_container:
-        collector = utils.get_feedback_collector()
         query = rag.query_maker(user_question)
         response = rag.rag(query)
         short_source_list = rag.create_short_source_list(response)
@@ -80,19 +79,6 @@ if user_question:
         st.write(long_source_list)
         st.write(query)
         references_container.update(label=":blue[CLICK HERE FOR FULL SOURCE DETAILS]", expanded=False)
-    # Send the prompt used and any feedback to Trubrics feedback collector
-    collector.log_prompt(
-        config_model={"model": "gpt-3.5-turbo"},
-        prompt=query,
-        generation=response['result'],
-        )
-    collector.st_feedback(
-        component="default",
-        feedback_type="thumbs",
-        open_feedback_label="[Optional] Provide additional feedback",
-        model="gpt-3.5-turbo",
-        prompt_id=None,
-        )
 
 # Lock the chat input container 50 pixels above bottom of viewport
 with stylable_container(

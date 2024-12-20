@@ -4,20 +4,7 @@ import datetime
 import requests
 import pandas as pd
 import streamlit as st 
-from trubrics.integrations.streamlit import FeedbackCollector
 
-
-
-@st.cache_data
-def get_feedback_collector():
-    '''
-    Set up the Truberics feedback collector. Feedback is here https://trubrics.streamlit.app/?ref=blog.streamlit.io
-    '''
-    return FeedbackCollector(
-        project="default",
-        email=st.secrets["TRUBRICS_EMAIL"],
-        password=st.secrets["TRUBRICS_PASSWORD"]
-    )
 
 
 @st.cache_data
