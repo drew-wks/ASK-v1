@@ -3,8 +3,12 @@ import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
 from pathlib import Path
 import os 
+import sys
 import base64
 import utils
+
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, parent_dir)
 
 st.set_page_config(page_title="ASK Library", initial_sidebar_state="collapsed")
 
